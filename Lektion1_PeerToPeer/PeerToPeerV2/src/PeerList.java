@@ -6,7 +6,7 @@ public class PeerList
 
     public boolean exists(String alias)
     {
-        return list.containsKey(peer);
+        return list.containsKey(alias);
     }
 
     public void add(String alias, int port)
@@ -14,9 +14,9 @@ public class PeerList
         list.put(alias, port);
     }
 
-    public Peer find(String alias)
+    public int find(String alias)
     {
-        return null;
+        return list.get(alias);
     }
 
     public int size(){

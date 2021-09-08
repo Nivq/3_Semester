@@ -5,12 +5,11 @@ public class Message implements Serializable {
 	private String from;
 	private String to;
 
-    public Message(String text, Peer from, Peer to)
-    {
-        this.text = text;
-        this.from = from;
-        this.to = to;
-    }
+	public Message(String text, String from, String to) {
+		this.text = text;
+		this.from = from;
+		this.to = to;
+	}
 
 	public String getText() {
 		return text;
@@ -20,9 +19,7 @@ public class Message implements Serializable {
 		return from;
 	}
 
-
-    public Peer getTo()
-    {
-        return to;
-    }
+	public String getTo() {
+		return to;
+	}
 }
