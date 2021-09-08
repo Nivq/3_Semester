@@ -4,7 +4,7 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
-public class AddressServer implements AddressServerInterface
+public class AddressServerImpl implements AddressServerInterface
 {
     @Override public boolean registerPeer(Peer peer) throws RemoteException
     {

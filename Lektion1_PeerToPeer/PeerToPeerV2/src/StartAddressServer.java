@@ -5,7 +5,7 @@ public class StartAddressServer
 {
     public static void main(String[] args)
     {
-        AddressServerInterface addressServer = new AddressServer();
+        AddressServerInterface addressServer = new AddressServerImpl();
         try
         {
             addressServer.startAddressServer();
