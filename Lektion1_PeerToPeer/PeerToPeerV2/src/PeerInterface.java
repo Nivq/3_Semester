@@ -4,4 +4,5 @@ import java.rmi.RemoteException;
 public interface PeerInterface extends Remote
 {
     void deliverMessage(Message message) throws RemoteException;
+    void deliverMessage(String message) throws RemoteException;
 }

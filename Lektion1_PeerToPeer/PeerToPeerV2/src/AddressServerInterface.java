@@ -4,8 +4,8 @@ import java.rmi.RemoteException;
 
 public interface AddressServerInterface extends Remote
 {
-    boolean registerPeer(Peer peer) throws RemoteException;
-    Peer findPeer(String alias) throws RemoteException;
+    void registerPeer(String alias, int port) throws RemoteException;
+    int findPeer(String alias) throws RemoteException;
     void startAddressServer() throws RemoteException, AlreadyBoundException;
 
 }
