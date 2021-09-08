@@ -25,7 +25,6 @@ public class AddressServerImpl implements AddressServer
         Registry registry = LocateRegistry.createRegistry(1099);
         registry.bind("addressServer", this);
         UnicastRemoteObject.exportObject(this,0);
-
     }
 
     @Override public void register(Peer peer)
