@@ -27,6 +27,8 @@ public class AddressServerImpl implements AddressServerInterface {
 		Registry registry = LocateRegistry.createRegistry(1099);
 		registry.bind("addressServer", this);
 		UnicastRemoteObject.exportObject(this, 0);
+
+		// Thread continuously printing out the current amount of online users
 		new Thread(() -> {
 			while (true) {
 				System.out.println("Online users: " + peerList.size());
