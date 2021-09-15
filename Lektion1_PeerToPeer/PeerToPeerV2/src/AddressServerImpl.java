@@ -4,23 +4,40 @@ import java.rmi.registry.LocateRegistry;
 import java.rmi.registry.Registry;
 import java.rmi.server.UnicastRemoteObject;
 
-public class AddressServerImpl implements AddressServerInterface
-{
-    @Override public boolean registerPeer(Peer peer) throws RemoteException
-    {
-        return false;
-    }
+public class AddressServerImpl implements AddressServerInterface {
+	PeerList peerList = new PeerList();
 
-    @Override public Peer findPeer(String alias) throws RemoteException
-    {
-        return null;
-    }
+	@Override
+	public void registerPeer(String alias, int port) throws RemoteException {
+		peerList.add(alias, port);
+	}
 
-    @Override public void startAddressServer()
-        throws RemoteException, AlreadyBoundException
-    {
-        Registry registry = LocateRegistry.createRegistry(1099);
-        registry.bind("addressServer", this);
-        UnicastRemoteObject.exportObject(this,0);
-    }
+	@Override
+	public int findPeer(String alias) throws RemoteException {
+		if (peerList.exists(alias)) {
+			return peerList.find(alias);
+		} else {
+			return -1;
+		}
+	}
+
+	@Override
+	public void startAddressServer()
+			throws RemoteException, AlreadyBoundException {
+		Registry registry = LocateRegistry.createRegistry(1099);
+		registry.bind("addressServer", this);
+		UnicastRemoteObject.exportObject(this, 0);
+
+		// Thread continuously printing out the current amount of online users
+		new Thread(() -> {
+			while (true) {
+				System.out.println("Online users: " + peerList.size());
+				try {
+					Thread.sleep(1000);
+				} catch (InterruptedException e) {
+					e.printStackTrace();
+				}
+			}
+		}).start();
+	}
 }

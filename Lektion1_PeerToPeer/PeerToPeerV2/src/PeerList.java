@@ -2,21 +2,24 @@ import java.util.TreeMap;
 
 public class PeerList
 {
-    private TreeMap<Peer, String> list;
-    //Dunno med Peer, String
+    private TreeMap<String, Integer> list = new TreeMap<>();
 
-    public boolean exists(Peer peer)
+    public boolean exists(String alias)
     {
-        return list.containsKey(peer);
+        return list.containsKey(alias);
     }
 
-    public void add(Peer peer)
+    public void add(String alias, int port)
     {
-
+        list.put(alias, port);
     }
 
-    public Peer find(String alias)
+    public int find(String alias)
     {
-        return null;
+        return list.get(alias);
+    }
+
+    public int size(){
+        return list.size();
     }
 }

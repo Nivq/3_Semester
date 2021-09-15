@@ -1,29 +1,25 @@
-public class Message
-{
-    private String text;
-    private Peer from;
-    private Peer to;
+import java.io.Serializable;
 
-    public Message(String text, Peer from, Peer to)
-    {
-        this.text = text;
-        this.from = from;
-        this.to = to;
-    }
+public class Message implements Serializable {
+	private String text;
+	private String from;
+	private String to;
 
-    public String getText()
-    {
-        return text;
-    }
+	public Message(String text, String from, String to) {
+		this.text = text;
+		this.from = from;
+		this.to = to;
+	}
 
-    public String getFrom()
-    {
-        return from.getAlias();
-    }
+	public String getText() {
+		return text;
+	}
 
+	public String getFrom() {
+		return from;
+	}
 
-    public Peer getTo()
-    {
-        return to;
-    }
+	public String getTo() {
+		return to;
+	}
 }
