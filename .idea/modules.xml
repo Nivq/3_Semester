@@ -3,10 +3,10 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/3_Semester.iml" filepath="$PROJECT_DIR$/3_Semester.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Lektion3_3Tier/BankingSystem/Lektion3_3tier/BankingSystem.iml" filepath="$PROJECT_DIR$/Lektion3_3Tier/BankingSystem/Lektion3_3tier/BankingSystem.iml" />
+      <module fileurl="file://$PROJECT_DIR$/Lektion3_3tier/BankingSystem/Lektion3_3tier/BankingSystem.iml" filepath="$PROJECT_DIR$/Lektion3_3tier/BankingSystem/Lektion3_3tier/BankingSystem.iml" />
       <module fileurl="file://$PROJECT_DIR$/Lektion3_3tier/BankingSystem2/BankingSystem2.iml" filepath="$PROJECT_DIR$/Lektion3_3tier/BankingSystem2/BankingSystem2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Lektion1_PeerToPeer/PeerToPeer/Lektion1_PeerToPeer/PeerToPeer.iml" filepath="$PROJECT_DIR$/Lektion1_PeerToPeer/PeerToPeer/Lektion1_PeerToPeer/PeerToPeer.iml" />
-      <module fileurl="file://$PROJECT_DIR$/Lektion1_PeerToPeer/PeerToPeerV2/PeerToPeerV2.iml" filepath="$PROJECT_DIR$/Lektion1_PeerToPeer/PeerToPeerV2/PeerToPeerV2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PeerToPeer/Lektion1_PeerToPeer/PeerToPeer.iml" filepath="$PROJECT_DIR$/PeerToPeer/Lektion1_PeerToPeer/PeerToPeer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/PeerToPeerV2/PeerToPeerV2.iml" filepath="$PROJECT_DIR$/PeerToPeerV2/PeerToPeerV2.iml" />
     </modules>
   </component>
 </project>
